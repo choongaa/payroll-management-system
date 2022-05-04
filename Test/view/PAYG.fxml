@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?> 
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox   xmlns:fx="http://javafx.com/fxml/1" 
+        fx:controller="controller.PaygController"
+        prefWidth="600" prefHeight="350"
+        spacing="5" styleClass="background">
+    
+    <GridPane hgap="10" vgap="8">
+        <Label  text="PAYG Annual Report:" styleClass="label-h2" 
+                GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    </GridPane>
+    
+    <HBox spacing="80" >
+        <GridPane hgap="10" vgap="2" >
+            <Label  text="Weekly Paid Hours:" styleClass="label-opac"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1" />
+            <Label  text="Gross Income:" styleClass="label-opac"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Label  text="Net Income:" styleClass="label-opac"
+                    GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            <Label  text="Superannuation:" styleClass="label-opac"
+                    GridPane.rowIndex="3" GridPane.columnIndex="1" />
+            <Label  fx:id="weeklyPaidHoursLb" styleClass="label-opac2"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2" />
+            <Label  fx:id="grossIncomeLb" styleClass="label-opac2"
+                    GridPane.rowIndex="1" GridPane.columnIndex="2" />
+            <Label  fx:id="netIncomeLb" styleClass="label-opac2"
+                    GridPane.rowIndex="2" GridPane.columnIndex="2" />
+            <Label  fx:id="superLb" styleClass="label-opac2"
+                    GridPane.rowIndex="3" GridPane.columnIndex="2" />
+        </GridPane>
+        <GridPane hgap="10" vgap="2" >
+             <Label text="Hourly Pay Rate:" styleClass="label-opac"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1" />
+            <Label  text="TAX Rate:" styleClass="label-opac"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Label  text="Deduction:" styleClass="label-opac"
+                    GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            <Label  text="Super Rate" styleClass="label-opac"
+                    GridPane.rowIndex="3" GridPane.columnIndex="1" />
+        </GridPane>
+    </HBox>
+    
+    <VBox spacing="50" alignment="BOTTOM_CENTER" >
+        <VBox spacing="10" />
+        <Button text="Close" onAction="#close" /> 
+    </VBox>
+    
+    <stylesheets>
+	<URL value="@stpfx.css" />
+    </stylesheets>
+    
+</VBox>

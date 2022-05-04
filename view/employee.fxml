@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox   xmlns:fx="http://javafx.com/fxml/1" 
+        fx:controller="controller.EmployeeController"
+        prefWidth="600" prefHeight="580"
+        spacing="10" styleClass="background">
+    
+        <GridPane vgap="5" hgap="20">
+            <Label  text="Personal Details" styleClass="label-h2" 
+                    GridPane.rowIndex="2" GridPane.columnIndex="6" />
+        </GridPane>
+        
+        <GridPane vgap="5" hgap="20">
+            <Label  text="Name:" styleClass="label-opac" 
+                    GridPane.rowIndex="0" GridPane.columnIndex="6" />
+            <TextField  GridPane.rowIndex="0" GridPane.columnIndex="9" 
+                        minWidth="230" fx:id="nameTf" />
+            <Label  text="Email:" styleClass="label-opac" 
+                    GridPane.rowIndex="1" GridPane.columnIndex="6" />
+            <TextField  GridPane.rowIndex="1" GridPane.columnIndex="9" 
+                        minWidth="230" fx:id="emailTf" />
+            <Label  text="Phone:" styleClass="label-opac" 
+                    GridPane.rowIndex="2" GridPane.columnIndex="6" />
+            <TextField  GridPane.rowIndex="2" GridPane.columnIndex="9" 
+                        minWidth="230" fx:id="phoneTf" />
+            <Label  text="Address:" styleClass="label-opac" 
+                    GridPane.rowIndex="3" GridPane.columnIndex="6" />
+            <TextField  GridPane.rowIndex="3" GridPane.columnIndex="9" 
+                        minWidth="230" fx:id="addressTf" />
+        </GridPane>
+        
+        <VBox spacing="10" />
+        <Separator />
+        
+        <GridPane vgap="5" hgap="20">
+            <Label  text="Employment Details" styleClass="label-h2" 
+                    GridPane.rowIndex="2" GridPane.columnIndex="6" /> 
+        </GridPane>
+       
+        <GridPane vgap="5" hgap="11">
+            <Label  text="TFN:" styleClass="label-opac" 
+                    GridPane.rowIndex="0" GridPane.columnIndex="11" />
+            <TextField  GridPane.rowIndex="0" GridPane.columnIndex="13" 
+                        minWidth="230" fx:id="TFNTf" />
+            <Label  text="Paid Hours:" styleClass="label-opac" 
+                    GridPane.rowIndex="1" GridPane.columnIndex="11" />
+            <TextField  GridPane.rowIndex="1" GridPane.columnIndex="13" 
+                        minWidth="230" text="0" fx:id="paidHoursTf" />
+            <Label  text="Hourly Rate:" styleClass="label-opac" 
+                    GridPane.rowIndex="2" GridPane.columnIndex="11" />
+            <TextField  GridPane.rowIndex="2" GridPane.columnIndex="13" 
+                        minWidth="230" text="0.0" fx:id="hourlyRateTf" />
+            <Label  text="Job Type:" styleClass="label-opac" 
+                    GridPane.rowIndex="3" GridPane.columnIndex="11" />
+            <TextField  GridPane.rowIndex="3" GridPane.columnIndex="13" 
+                        minWidth="230" fx:id="jobTypeTf" />
+        </GridPane>
+        
+        <VBox spacing="10" />
+        <VBox spacing="10" /> 
+        
+        <HBox alignment="CENTER" spacing="3">
+            <Button text="Add" onAction="#add" fx:id="addBtn" />
+            <Button text="Update" fx:id="updateBtn" />
+            <Button text="Close" onAction="#close" fx:id="closeBtn" />  
+        </HBox>
+        
+    <stylesheets>
+	<URL value="@stpfx.css" />
+    </stylesheets>
+    
+</VBox>

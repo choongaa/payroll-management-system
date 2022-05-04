@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox   xmlns:fx="http://javafx.com/fxml/1" 
+        fx:controller="controller.StpController"
+        prefWidth="600" prefHeight="970"
+        spacing="5" styleClass="background">
+    
+    <TableView  styleClass="tabel-view" fx:id="reportTv" 
+                prefWidth="600" prefHeight="770" items="${controller.stp.reports}" >
+        <columns>
+            <TableColumn text="Name" fx:id="nameClm"
+                         minWidth="120" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Wages" fx:id="wagesClm"
+                         minWidth="120" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="wages" />
+                </cellValueFactory>
+            </TableColumn>  
+            <TableColumn text="Tax" fx:id="taxClm"
+                         minWidth="120" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="tax" />
+                </cellValueFactory>
+            </TableColumn>  
+            <TableColumn text="Net" fx:id="netClm"
+                         minWidth="120" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="net" />
+                </cellValueFactory>
+            </TableColumn>  
+            <TableColumn text="Super" fx:id="superClm"
+                         minWidth="120" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="super" />
+                </cellValueFactory>
+            </TableColumn>  
+        </columns>
+    </TableView>
+
+    <Separator />
+    <GridPane hgap="10" vgap="10" >
+        <Label  text="Total Wages:" GridPane.rowIndex="1" GridPane.columnIndex="5" />
+        <Label  text="${controller.stp.totalwages1}" GridPane.rowIndex="1" GridPane.columnIndex="7" />
+        <Label  text="Total Net:" GridPane.rowIndex="2" GridPane.columnIndex="5" />
+        <Label  text="${controller.stp.totalnet}" GridPane.rowIndex="2" GridPane.columnIndex="7" />
+        <Label  text="Quarter BAS:" GridPane.rowIndex="3" GridPane.columnIndex="5" />
+        <Label  text="${controller.stp.bas}" GridPane.rowIndex="3" GridPane.columnIndex="7" />
+        <Label  text="Total Tax:" GridPane.rowIndex="1" GridPane.columnIndex="18" />
+        <Label  text="${controller.stp.totaltax}" GridPane.rowIndex="1" GridPane.columnIndex="20" />
+        <Label  text="Total Super:" GridPane.rowIndex="2" GridPane.columnIndex="18" />
+        <Label  text="${controller.stp.totalsuper}" GridPane.rowIndex="2" GridPane.columnIndex="20" />
+    </GridPane>
+    
+    <HBox alignment="BOTTOM_CENTER" >
+        <Button text="Close" onAction="#close"  />
+    </HBox>
+    
+    <stylesheets>
+	<URL value="@stpfx.css" />
+    </stylesheets>
+    
+</VBox>

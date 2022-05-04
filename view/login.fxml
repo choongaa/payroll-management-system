@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+
+<VBox   xmlns:fx="http://javafx.com/fxml/1" 
+        fx:controller="controller.LoginController"
+        prefWidth="400" prefHeight="250"
+        spacing="10" styleClass="background">
+    
+    <VBox spacing="40" />
+    <GridPane vgap="15" hgap="20">
+        <Label  text="Login" styleClass="label-h2"
+                GridPane.rowIndex="0" GridPane.columnIndex="2" />
+        <Label  text="Email:" styleClass="label" 
+                GridPane.rowIndex="1" GridPane.columnIndex="2" />
+        <TextField  GridPane.rowIndex="1" GridPane.columnIndex="3" 
+                    fx:id="emailTf" />
+        <Label  text="Password:" styleClass="label"
+                GridPane.rowIndex="2" GridPane.columnIndex="2" />
+        <PasswordField  GridPane.rowIndex="2" GridPane.columnIndex="3" 
+                        fx:id="passwordPf" />
+    </GridPane>
+    
+    <HBox alignment="CENTER"> 
+        <Label fx:id="errorLb" styleClass="label-error" />
+    </HBox>
+    
+    <GridPane hgap="3">
+        <Button text="OK" GridPane.rowIndex="0" GridPane.columnIndex="48"
+                fx:id="okBtn" onAction="#ok" />
+        <Button text="Cancel" GridPane.rowIndex="0" GridPane.columnIndex="49"
+                fx:id="cancelBtn" onAction="#cancel" />
+    </GridPane>    
+        
+    <stylesheets>
+	<URL value="@stpfx.css" />
+    </stylesheets>
+    
+</VBox>

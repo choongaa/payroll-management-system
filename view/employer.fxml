@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+ 
+<VBox   xmlns:fx="http://javafx.com/fxml/1" 
+        fx:controller="controller.EmployerController"
+        prefWidth="600" prefHeight="410"
+        spacing="10" styleClass="background">
+    
+        <Label text="Filters" styleClass="label-h2" />
+            
+        <GridPane vgap="10" hgap="10">    
+            <Label  GridPane.rowIndex="0" GridPane.columnIndex="2" 
+                    text="Name:" styleClass="label-opac" />
+            <TextField  GridPane.rowIndex="0" GridPane.columnIndex="3" 
+                        promptText="Filter by name" />
+            <Label  GridPane.rowIndex="0" GridPane.columnIndex="4" 
+                    text="Email:" styleClass="label-opac" />
+            <TextField  GridPane.rowIndex="0" GridPane.columnIndex="5" 
+                        promptText="Filter by email"  />
+        </GridPane>
+
+        <Separator />
+        
+                <TableView  styleClass="table-view" fx:id="employeesTv" 
+                            prefWidth="600" items="${controller.employer.employees}" >
+                        <columns>
+                            <TableColumn text="Name" fx:id="nameClm"
+                                         minWidth="200" >
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="name" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Email" fx:id="emailClm"
+                                         minWidth="200" >
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="email" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Phone" fx:id="phoneClm"
+                                         minWidth="200" >
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="phone" />
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                </TableView>
+
+        <Separator />
+        
+        <HBox spacing="5" alignment="CENTER">
+            <Button text="Add" onAction="#addEmployee" fx:id="addBtn" />
+            <Button text="Delete" onAction="#deleteEmployee" fx:id="deleteBtn" />
+            <Button text="Select" onAction="#addEmployee" fx:id="selectBtn" />
+            <Button text="PAYG" onAction="#PAYG" fx:id="PAYGBtn" />
+            <Button text="STP" onAction="#STP" fx:id="STPBtn" />
+            <Button text="Close" onAction="#exit" fx:id="closeBtn" />
+        </HBox>
+        
+        <VBox spacing ="10" />
+        
+    <stylesheets>
+	<URL value="@stpfx.css" />
+    </stylesheets>
+    
+</VBox>
+

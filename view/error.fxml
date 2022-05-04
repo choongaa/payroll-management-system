@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox   xmlns:fx="http://javafx.com/fxml/1" 
+        fx:controller="controller.ErrorController"
+        prefWidth="350" prefHeight="300" alignment="CENTER" 
+        spacing="10" styleClass="background">
+    
+        <VBox spacing="10" /> 
+        <VBox spacing="10" /> 
+
+        <GridPane hgap="10" alignment="CENTER" >    
+            <Label  GridPane.rowIndex="5" GridPane.columnIndex="0" 
+                    text="From Validation Errors" styleClass="label-opac" />
+        </GridPane>
+        
+        <VBox alignment="BASELINE_CENTER" >
+            <Label text="Incorrect phone pattern!" styleClass="label-e2" />
+            <Label text="Incorrect TFN pattern!" styleClass="label-e2" />
+        </VBox>
+        
+        <VBox spacing="10" /> 
+        <VBox spacing="10" /> 
+        <Button text="Okay" onAction="#close"  />
+        
+    <stylesheets>
+	<URL value="@stpfx.css" />
+    </stylesheets>
+    
+</VBox>

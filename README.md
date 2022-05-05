@@ -1,4 +1,4 @@
-# JavaFx-STP # Run STP.jar
+# STP-Application Programming
 A prototype STP system which allows employers to calculate and auto generate a payroll report for each employee. 
 
     Languages - Java, JavaFX
